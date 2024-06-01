@@ -3,5 +3,5 @@ document.getElementById("logout").addEventListener("click", () => {
     localStorage.removeItem('token');
 
     // Redirigir a la página de inicio de sesión
-    document.location.href = "/pages/login.html";
+    document.location.href = "/app/pages/login.html";
 });

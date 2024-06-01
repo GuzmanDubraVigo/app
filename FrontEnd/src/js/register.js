@@ -109,7 +109,7 @@ form.addEventListener('submit', async (e) => {
     console.log(data)
     if (data.status === 'succeeded') {
       // Registro exitoso, redirigir al usuario a la página de login
-      window.location.href = '/pages/login.html';
+      window.location.href = '/app/pages/login.html';
     } else {
       // Mostrar error al usuario
       document.getElementById('form-error').textContent = data.message;

@@ -22,7 +22,7 @@ function clearLocalStorage() {
 
 // Función para redirigir al login
 function redirectToLogin() {
-    window.location.href = 'http://localhost:4000/pages/register';
+    window.location.href = 'http://localhost:4000/app/pages/register';
 }
 
 // Verifica si el usuario tiene permisos válidos
