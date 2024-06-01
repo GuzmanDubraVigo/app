@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/app/', 
+  build: {
+    outDir: 'dist',
+  },
   server: {
     port: 4000,
     open: '/pages/register.html',
