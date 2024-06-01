@@ -1,10 +1,13 @@
+// frontend/src/js/solicitar-premium.js
+import apiUrl from '../config';
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".btn-solicitar-premium").addEventListener("click", function (event) {
         event.preventDefault();
         
         const token = localStorage.getItem('token');  // Obtener el token del localStorage
 
-        fetch('/solicitar-premium', {
+        fetch(`${apiUrl}/solicitar-premium`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

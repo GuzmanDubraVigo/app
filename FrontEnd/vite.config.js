@@ -1,20 +1,19 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/app/', 
+  base: '/app/', // Reemplaza '/app/' con el nombre de tu repositorio si es diferente
   build: {
     outDir: 'dist',
   },
   server: {
     port: 4000,
-    open: '/pages/register.html',
+    open: '/index.html', // Asegúrate de que esta ruta es correcta
     proxy: {
-      '/solicitar-premium': {
-        target: 'http://localhost:3000',
+      '/api': {
+        target: 'https://app-pearl-phi.vercel.app', // URL de tu backend en Vercel
         changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/solicitar-premium/, '/solicitar-premium')
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });

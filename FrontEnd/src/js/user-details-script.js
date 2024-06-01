@@ -1,3 +1,4 @@
+// frontend/src/js/user-details-script.js
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);
@@ -6,8 +7,9 @@ function formatDate(dateString) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const userData = JSON.parse(localStorage.getItem('userData'));
+    const userDetails = document.getElementById('user-details');
+    
     if (userData) {
-        const userDetails = document.getElementById('user-details');
         userDetails.innerHTML = `
             <div class="container-fluid justify-content-center p-2 p-sm-5">
                 <div class="col-12 col-md-8 form-control border-success">
@@ -50,7 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     } else {
-        // Manejar el caso en que no hay datos de usuario
+        userDetails.innerHTML = `
+            <div class="alert alert-warning" role="alert">
+                No se encontraron datos del usuario. Por favor, inicia sesión nuevamente.
+            </div>
+        `;
     }
 });
-

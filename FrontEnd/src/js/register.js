@@ -1,3 +1,6 @@
+// frontend/src/js/register.js
+import apiUrl from '../config';
+
 const form = document.getElementById('register-form');
 
 form.addEventListener('submit', async (e) => {
@@ -45,7 +48,7 @@ form.addEventListener('submit', async (e) => {
   } else {
     // Verificar si el email ya existe
     try {
-      const emailResponse = await fetch('http://localhost:3000/user/check-email', {
+      const emailResponse = await fetch(`${apiUrl}/user/check-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -76,8 +79,6 @@ form.addEventListener('submit', async (e) => {
     hasError = true;
   }
 
-  
-
   if (hasError) {
     return;
   }
@@ -90,7 +91,7 @@ form.addEventListener('submit', async (e) => {
     // Obtener el token de autenticación del almacenamiento local
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:3000/user/singup', {
+    const response = await fetch(`${apiUrl}/user/singup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

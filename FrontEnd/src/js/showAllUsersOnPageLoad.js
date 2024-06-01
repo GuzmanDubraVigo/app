@@ -1,3 +1,6 @@
+// frontend/src/js/showAllUsersOnPageLoad.js
+import apiUrl from '../config';
+
 // Función para formatear la fecha
 const formatBirthdate = (birthdate) => {
   return new Date(birthdate).toLocaleDateString("es-ES", {
@@ -16,7 +19,7 @@ function getAllUsers() {
     return;
   }
 
-  fetch("http://localhost:3000/user/", {
+  fetch(`${apiUrl}/user/`, {
     method: "GET",
     headers: {
       "auth-token": token,
@@ -94,7 +97,6 @@ function renderUserList(usersData) {
         </tbody>
       </table>
     </div>
-    
         `
     )
     .join("");

@@ -1,3 +1,5 @@
+// frontend/src/js/userAccess.js
+
 // Función para cargar los datos del usuario desde localStorage
 const loadUserData = () => {
   const userData = localStorage.getItem('userData');
