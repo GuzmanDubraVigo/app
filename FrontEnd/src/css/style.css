@@ -1,0 +1,42 @@
+.body-login, .body-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/sbg2.jpg');
+  animation: animateBackground 20s infinite alternate; /* La animación se repite infinitamente */
+}
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.card-img{
+    max-width: 60%;
+    height: auto;
+}
+
+#container-login, #container-register{
+  max-width: 400px;
+  
+}
+.error-login, .error-register {
+   display: none;
+}
+.error{
+  color: red;
+}
+.oculto{
+  display: none;
+}
+
+.error-message {
+  color: red;
+}
+.btn.btn-outline-dark {
+  cursor: default;
+}

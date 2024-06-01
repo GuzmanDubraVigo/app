@@ -1,0 +1,88 @@
+/* user.css */
+#user-details {
+  background-image: url('/sbg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#user-details .container-fluid {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 120px; /* Ajusta esta altura según la altura real del footer */
+  z-index: 1000; /* Asegúrate de que el footer esté por encima del sidebar */
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    padding: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.675rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .table thead th {
+    font-size: 0.8rem;
+  }
+
+  .table td {
+    font-size: 0.675rem;
+  }
+
+  .table {
+    font-size: 0.7rem;
+  }
+
+  .container-fluid {
+    padding: 0.3rem;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .table th, .table td {
+    padding: 0.25rem;
+  }
+
+  .text-center h1 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .container-fluid #user-details {
+    padding: 0;
+  }
+
+  .col-12.col-md-8 {
+    max-width: 100%;
+  }
+}

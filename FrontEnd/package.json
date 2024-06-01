@@ -1,0 +1,21 @@
+{
+  "name": "App_Dash_Board ",
+  "private": true,
+  "version": " 2.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "jwt-decode": "^4.0.0",
+    "sweetalert2": "^11.11.0"
+  }
+}

@@ -1,0 +1,139 @@
+@media (max-width: 576px) {
+  .form-control {
+    padding: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.675rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .table thead th {
+    font-size: 0.8rem;
+  }
+
+  .table td {
+    font-size: 0.675rem;
+  }
+
+  .table {
+    font-size: 0.7rem;
+  }
+
+  .container-fluid {
+    padding: 0.3rem;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .table th, .table td {
+    padding: 0.25rem;
+  }
+
+  .text-center h1 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+}
+
+#user_list_box {
+  cursor: pointer;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%; /* Posición inicial del fondo */
+  }
+  100% {
+    background-position: 100% 100%; /* Posición final del fondo */
+  }
+}
+
+.main {
+  background-image: none; /* Eliminamos el fondo de imagen de .main */
+}
+
+/* Estilo para ocultar el fondo de imagen */
+.bg_none {
+  background-image: none !important;
+}
+
+/* Estilo para el sidebar */
+#sidebar {
+  margin-top: 85px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+#users_div {
+  margin-top: 85px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  footer .row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  footer .col-md-auto {
+      margin-bottom: 1rem;
+  }
+
+  footer .col-12 {
+      width: 100%;
+  }
+
+  .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+  }
+
+  .link-body-emphasis {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+  }
+
+  .link-body-emphasis svg {
+      margin-right: 0;
+  }
+
+  footer .text-center {
+      width: 100%;
+  }
+
+  .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
