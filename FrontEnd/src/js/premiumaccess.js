@@ -1,3 +1,6 @@
+// frontend/src/js/premiumaccess.js
+import apiUrl from '../config';
+
 // Función para verificar si el usuario es premium
 const isPremiumUser = (userId) => {
   const user = window.usersData.find((user) => user._id === userId);
@@ -27,7 +30,7 @@ const deshabilitarUsuario = (userId, button) => {
     const token = localStorage.getItem('token');
 
     // Enviar solicitud al servidor para actualizar el estado
-    fetch(`http://localhost:3000/user/disable/${userId}`, {
+    fetch(`${apiUrl}/user/disable/${userId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

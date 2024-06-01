@@ -1,10 +1,13 @@
+// frontend/src/js/deleteUser.js
+import apiUrl from '../config';
+
 // Obtener el token de autenticación del almacenamiento local
 const token = localStorage.getItem("token");
 
 // Función para eliminar un usuario con confirmación y mostrar sus datos
 function eliminarUsuario(userId) {
     // Solicitar datos del usuario al servidor
-    fetch(`http://localhost:3000/user/${userId}`)
+    fetch(`${apiUrl}/user/${userId}`)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -25,7 +28,7 @@ Correo electrónico: ${userData.email}`);
                 // Si el usuario confirmó la eliminación
                 if (confirmacion) {
                     // Enviar solicitud para eliminar el usuario
-                    fetch(`http://localhost:3000/user/${userId}`, {
+                    fetch(`${apiUrl}/user/${userId}`, {
                         method: "DELETE",
                         headers: {
                             'auth-token': localStorage.getItem('token')

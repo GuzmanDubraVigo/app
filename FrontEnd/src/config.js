@@ -1,4 +1,4 @@
 
-const apiUrl = 'https://tu-backend-en-railway.app'; // Reemplaza con la URL real
+const apiUrl = 'https://app-pearl-phi.vercel.app'; 
 
 export default apiUrl;

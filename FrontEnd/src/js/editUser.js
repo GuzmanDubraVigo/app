@@ -1,6 +1,9 @@
+// frontend/src/js/editUser.js
+import apiUrl from '../config';
+
 // Función para verificar si el email ya existe
 function verificarEmailExistente(email, userId) {
-    return fetch(`http://localhost:3000/user/check-email`, {
+    return fetch(`${apiUrl}/user/check-email`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +26,7 @@ function editarUsuario(userId) {
     const token = localStorage.getItem('token');
 
     // Solicitar datos del usuario al servidor
-    fetch(`http://localhost:3000/user/${userId}`, {
+    fetch(`${apiUrl}/user/${userId}`, {
         headers: {
             'auth-token': localStorage.getItem('token')
         }
@@ -155,7 +158,7 @@ function guardarCambios() {
                 throw new Error('El email ya existe');
             } else {
                 // Si el email no existe, proceder con la solicitud PATCH
-                return fetch(`http://localhost:3000/user/${userId}`, {
+                return fetch(`${apiUrl}/user/${userId}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
